@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>AnimeSpot</title>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css"
+          th:href="@{bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<header th:replace="fragments/parts::menu">
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center"><h1 class="display-3">Anime Spot</h1></div>
+
+                <form class="form-inline">
+                    Order by:
+                    <input type="submit" name="order" class="btn btn-link" value="All"/>
+                    <input type="submit" name="order" class="btn btn-link" value="Release Date"/>
+                </form>
+
+                <div class="card-group">
+                    <div class="card col-4 thumbnail">
+
+                        <img
+                                class="card-image-top img-fluid img-thumbnail"
+                                onerror="this.src='https://i.ytimg.com/vi/BqJyluskTfM/maxresdefault.jpg';"
+                                src="https://23waystohateyourself.files.wordpress.com/2013/10/shingeki-no-kyojin-poster.jpg"/>
+
+                        <div class="card-block">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text"><strong>Episodes</strong></p>
+                            <p class="card-text"><strong>Released</strong></p>
+                            <p class="card-text">Description</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a class="card-button btn btn-outline-primary" name="info" href="#">Info</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script th:src="@{jquery/jquery.min.js}"></script>
+<script th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
